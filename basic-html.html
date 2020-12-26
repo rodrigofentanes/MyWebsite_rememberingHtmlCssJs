@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- characters and responsiveness -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Search Engine Optimization (SEO) -->
+        <meta name="author" content="Rodrigo Fentanes">
+        <meta name="description" content="My name is Rodrigo Fentanes and this is my portfolio. I'm a full stack developer/programmer and I love technology. My main languages is JavaScript.">
+        <meta name="keywords" content="Rodrigo Fentanes, portfolio">
+        <title>Home - Rodrigo Fentanes</title>
+
+        <link rel="stylesheet" href="style.css">
+        
+        
+    </head>
+    <body>
+        <!-- A good SEO practice is to use only ONE <h1> tag per page -->
+        <h1>How internet works?</h1>
+        <!-- We can use "lorem" plus "some number" inside the <p> tag to generate a lorem ipsum text -->
+        <p>Each computer/router has a IP address.</p>
+        <p>Computers talk to eachother using the TCP/IP protocol.</p>
+        <p>HTTP (Hyper Text Transfer Protocol) handles web traffic (requests/responses).</p>
+        <p>HTTPS is for secure connections using SSL certificates.</p>
+        <p>HTTP is an Application Layer Protocol that runs over TCP and is responsible for handling web traffic between a browser and a web server that stores a web site.</p>
+        <p>Websites/Webpages are files stored on computers that run a piece of software called a web server.</p>
+        <p>Hosting companies provides space on a server for your website.</p>
+        <p>Domanin names can be purchase from registrars and linked to your hosting account/web server.</p>
+        <p>DNS is used to map IP addresses to domain names.</p>
+        <img src="./img/1-web-works.png" width="600">
+
+        <h1>Hypertext Markup Language</h1>
+        <p>HTML is not a programming language.</p>
+        <p>Markup is for creating webpages / documents for the viewers.</p>
+        
+        <h1>Cascating Style Sheets</h1>
+        <p>CSS is not a programming laguage.</p>
+        <p>Is a Styling/Stylesheet Language.</p>
+        <p>Used for styling HTML elements.</p>
+        <p>Can be extended with the precompilers Sass/Less.</p>
+        <p>.</p>
+
+        <h1>Whats is it for?</h1>
+        <p>HTML = Content Display/Structure</p>
+        <p>JavaScript = Dynamic Front-end Programming</p>
+        <p>PHP, Python, Java, C#, JavaScript = Back-end Programming</p>
+        <p>MySQL, MongoDB = Database/Storage</p>
+        
+        <h2>Text</h2>
+        <!-- Semantic tag -->
+        <strong>Bolt text</strong> 
+        <!-- line break -->
+        <br> 
+        <b>Bolt text</b>
+        <!-- line division -->
+        <hr> 
+        <!-- Semantic tag -->
+        <em>Italic text</em> 
+        <br>
+        <i>Italic text</i>
+        <hr>
+        <!-- Semantic tag -->
+        <del>Strike text</del> 
+        <br>
+        <s>Strike text</s>
+
+        <h2>Links and images</h2>
+        <a href="http://google.com">Link tag - Open in this tab</a>
+        <br>
+        <a href="http://google.com" target="_blank">Link tag - Open in a new tab</a>
+        <br>
+        <a href="./img/1-web-works.png" target="_blank">Internal link - Local image</a>
+        <br>
+        <a href="https://source.unsplash.com/random" target="_blank" title="This is a hover description">External link - Remote image - Hover description</a>
+        <hr>
+        <img src="./img/1-web-works.png" alt="Internal image" width="200">
+        <br>
+        <img src="https://source.unsplash.com/random" alt="External random image" width="200">
+
+        <h2>Lists and tables</h2>
+        <!-- Unordered list -->
+        <ul>
+            <li>One</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+        <!-- Ordered list -->
+        <!-- type can be 1, A, a, I, i -->
+        <ol type="I">
+            <!-- we can use the shortcut li*4 in VSCode to create some li's we want -->
+            <li>One</li>
+            <li>two</li>
+            <li>three</li>
+        </ol>
+        <!-- Tables -->
+        <table>
+            <thead>
+                <tr>
+                    <th width="200" align="left">First name</th>
+                    <th width="200" align="left">Last name</th>
+                    <th width="200" align="left">Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>john@doe.com</td>
+                </tr>
+                <tr>
+                    <td>Mad</td>
+                    <td>Max</td>
+                    <td>mad@max.com</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+
+        <!-- Forms  -->
+        <form action="process.php">
+            <div>
+                <label for="name">Name</label> <br> 
+                <input type="text" id="name" name="name" placeholder="Enter your name...">
+            </div>
+            <div>
+                <label for="email">Email</label> <br> 
+                <input type="email" id="email" name="email" placeholder="Enter your email...">
+            </div>
+            <div>
+                <label for="message">Message</label> <br>
+                <textarea name="message" id="message" cols="30" rows="5"></textarea>
+            </div>
+            <div>
+                <label for="sex">Sex</label>
+                <select name="sex" id="sex">
+                    <option value="empty" selected></option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div>
+                <label for="age">Age</label>
+                <input type="number" name="number" id="number">
+            </div>
+            <div>
+                <label for="birthdate">Birthdate</label>
+                <input type="date" name="birthdate" id="birthdate">
+            </div>
+            <div>
+                <label for="membership">Membership</label>
+                <input type="radio" value="simple" name="membership" id="membership"> simple
+                <input type="radio" value="standard" name="membership" id="membership" checked> standard
+                <input type="radio" value="super" name="membership" id="membership"> super
+            </div>
+            <div>
+                <label for="membership">I like...</label>
+                <input type="checkbox" value="bike" name="likes" id="likes"> Bike
+                <input type="checkbox" value="car" name="likes" id="likes"> Car
+                <input type="checkbox" value="boat"Cname="likes" id="likes"> Boat
+            </div>
+            <!-- input submit -->
+            <input type="submit" value="Submit">
+            <!-- button submit -->
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+
+            <!-- ID IS UNIQUE AND CANNOT BE REPEATED -->
+
+            <!-- We can put all css inside the tag "style" -->
+            <style>
+                .card{
+                    border: 1px solid #ccc;
+                    background: #f4f4f4;
+                    padding: 20px;
+                    margin-bottom: 10px;
+                }
+                .enhance{
+                    color: yellow;
+                    background-color: black;
+                }
+            </style>
+
+            <!-- div, span, id, class -->
+            <div id="main-header">
+                <h2>My web site</h2>
+                <p>A site about me</p>
+            </div>
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+            <!-- "div#about" and "#about" will create the same thing -->
+            <div id="about" class="card">
+                <h3>About</h3>
+                <p>Lorem ipsum dolor sit amet <span class="enhance">consectetur adipisicing elit.</span> Earum inventore rem dignissimos excepturi cumque, delectus nisi amet? Veritatis modi ex accusamus minus non? Laudantium ullam enim a sunt vero iste, delectus vel itaque. Voluptatibus, animi labore magnam inventore quaerat recusandae.</p>
+            </div>
+            <div id="contact" class="card">
+                <h3>Contact</h3>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet consectetur.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur.</li>
+                </ul>
+            </div>
+            <!-- &copy; is a html entity -->
+            <div id="footer">
+                <p>Copyright &copy; 2020</p>
+            </div>
+
+            <!-- Simulate Computer code -->
+            <code>
+                &lt;?php echo 'hello'; ?&gt;
+            </code>
+            <p>Save file by pressing <kbd>Ctrl + S</kbd></p>
+        </form>
+
+        <!-- semantic tags helps with accessibility -->
+        <h2>Semantic tags</h2>
+        <img src="./img/2-semantic-tags.png" alt="" width="600"> <br>
+        <a href="./semantic-tag.html" title="go to the page" target="_blank">Go to semantic page</a>
+
+        
+        <!-- All JavaScript code or file is inside a script tag -->
+        <script src="main.js"></script>
+    </body>
+</html>
