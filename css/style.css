@@ -1,6 +1,7 @@
+/* use 'rem' instead 'em' is one good practice */
+
 :root {
-    --page-wrap:70%;
-    --nav-height: 48px;
+    --page-wrap:70vw;
     --content-simetry: 80px;
     --icon-size: 30px;
     --icon-size-hover: calc(var(--icon-size) * 1.1);
@@ -9,29 +10,23 @@
 }
 
 html, body {
-    font-size: 100%;
+    /* use 10px is good to 'rem' fast calculate, 62.5% of 16px is 10px too, 16px is the default browser font-size */
+    font-size: 10px;
     /* we can use "web safe fonts" or "google fonts" as good practices. */
     font-family: 'Poppins', sans-serif;
     line-height: 1.5;
     letter-spacing: 1.1px;
-    background: url(../img/bw-rf.png) no-repeat center var(--nav-height) fixed; 
+    background: url(../img/bw-rf.png) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    min-height: 100%;
-    max-height: 100%;
+    box-sizing: border-box;
 }
 
-
 .animation {
-    position: fixed;
-    overflow: auto;
-    height: 100%;
-    top: var(--nav-height);
-    bottom: 0;
-    right: 0;
-    left: 0;
+    /* vh propertie allows us to use 100% of page slaces instead of 100% of page view */
+    min-height: 100vh;
     background: linear-gradient(-45deg, rgba(238, 119, 82, .97), rgba(214, 55, 116, .97), rgba(214, 55, 116, .97), rgba(214, 55, 116, .97), rgba(206, 36, 93, 0.6), rgba(36, 160, 206, .97), rgba(36, 160, 206, .97), rgba(36, 160, 206, .97), rgba(42, 197, 161, .97));
     background-size: 400% 400%;
     animation: gradient 40s ease infinite;
@@ -52,26 +47,25 @@ html, body {
 .container{
     width: var(--page-wrap);
     margin: 0 auto;
-    height: 100%;
+    padding-top: 49px;
 }
 
 nav{
     position: fixed;
     top:0;
     left: 0;
-    height: var(--nav-height);
     background:rgba(56, 56, 56, .9);
-    width:100%;
+    width:100vw;
+    display: inline-block;
 }
+
 .navbar{
-    max-width: var(--page-wrap);
+    width: var(--page-wrap);
     margin: 0 auto;
 }
 
 #logo {
-    font-size: 1.1rem;
     font-weight: 800;
-    padding: 12px 15px 10px 15px;
 }
 
 .navbar li{
@@ -84,9 +78,9 @@ nav{
 }
 
 .navbar a{
-    font-size: 0.9rem;
+    font-size: 1.4rem;
     display: inline-block;
-    padding: 14px 15px 13px 15px;
+    padding: 15px 15px 13px 15px;
     color: white;
     text-decoration: none;
     cursor: pointer;
@@ -98,7 +92,7 @@ nav{
 }
 
 .nav-icon {
-    font-size: 1.2rem;
+    font-size: 1.7rem;
 }
 
 /* this is a "pseudo-classe" or "sudo selector" */
@@ -119,22 +113,21 @@ nav{
 
 
 header {
-    width: 100%;
-    margin: var(--nav-height) auto 20px auto;
+    margin: 0 auto 20px auto;
     color: white;
     text-align: center;
     padding-top: var(--content-simetry);
 }
 
 header p {
-    font-size: 0.9rem;
+    font-size: 1.3rem;
     letter-spacing: .5em;
     font-weight: 500;
     text-transform: uppercase;
 }
 
 h1 {
-    font-size: 3.5rem;
+    font-size: 5.2rem;
     font-weight: 700 !important;
 }
 
@@ -143,12 +136,11 @@ h1 MyTag{
 }
 
 main {
-    width: 100%;
     color: white;
 }
 
 #welcome{
-    font-size: 1rem;
+    font-size: 1.4rem;
     font-weight: 200;
     text-align: justify;
 }
@@ -160,7 +152,7 @@ main {
 
 #social-media{
     margin: var(--content-simetry) 0;
-    font-size: 0.9rem;
+    font-size: 1.3rem;
     text-align: center;
 }
 
@@ -169,6 +161,7 @@ main {
     color: white !important;
     font-size: 1px;
     padding-top: var(--icon-size-stabilize);
+    /* display:none is other option but with one different behavior */
     visibility: hidden;
 }
 
@@ -187,13 +180,43 @@ main {
 }
 
 footer {
-    width: 100%;
-    padding: 0 0 10px 0;
     text-align: center;
-    font-size: 14px;
-    padding-bottom: 80px;
+    font-size: 1.2rem;
+    padding-bottom: 30px;
 }
 footer div {
     color: white;
     font-weight: 400;
+}
+
+/* we can use the nomenclature -> @media(min-width:500px) and (max-width:800px) to activate some appearence in this range */
+/* or see -> @media only screen and (max-width:800px) */
+@media(max-width:800px) {
+    :root {
+        --page-wrap: 80vw;
+    }
+
+    html, body{
+        font-size: 9px;
+    }
+
+    nav{
+        text-align: center;
+        display: inline-block;
+        
+    }
+    
+    .navbar li{
+        display: block;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .navbar ul{
+        float: none;
+        /* display: none; */
+    }
+
+    .navbar a{
+        display: block;
+    }
 }
