@@ -1,7 +1,7 @@
 /* use 'rem' instead 'em' is one good practice */
 
 :root {
-    --page-wrap:70vw;
+    --page-wrap:70%;
     --content-simetry: 80px;
     --icon-size: 30px;
     --icon-size-hover: calc(var(--icon-size) * 1.1);
@@ -21,15 +21,14 @@ html, body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    box-sizing: border-box;
 }
 
 .animation {
-    /* vh propertie allows us to use 100% of page slaces instead of 100% of page view */
-    min-height: 100vh;
     background: linear-gradient(-45deg, rgba(238, 119, 82, .97), rgba(214, 55, 116, .97), rgba(214, 55, 116, .97), rgba(214, 55, 116, .97), rgba(206, 36, 93, 0.6), rgba(36, 160, 206, .97), rgba(36, 160, 206, .97), rgba(36, 160, 206, .97), rgba(42, 197, 161, .97));
     background-size: 400% 400%;
     animation: gradient 40s ease infinite;
+    /* vh propertie allows us to use 100% of page slaces instead of 100% of page view */
+    min-height: 100vh;
 }
 
 @keyframes gradient {
@@ -55,7 +54,7 @@ nav{
     top:0;
     left: 0;
     background:rgba(56, 56, 56, .9);
-    width:100vw;
+    width:100%;
     display: inline-block;
 }
 
