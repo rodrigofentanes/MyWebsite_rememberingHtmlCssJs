@@ -1,3 +1,8 @@
+.flex-container{
+    display: flex;
+    flex-direction: column;
+}
+
 /* use 'rem' instead 'em' is one good practice */
 
 :root {
@@ -16,37 +21,19 @@ html, body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.5;
     letter-spacing: 1.1px;
-    background: url(../img/bw-rf.png) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
 }
 
 .animation {
-    background: linear-gradient(-45deg, rgba(238, 119, 82, .97), rgba(214, 55, 116, .97), rgba(214, 55, 116, .97), rgba(214, 55, 116, .97), rgba(206, 36, 93, 0.6), rgba(36, 160, 206, .97), rgba(36, 160, 206, .97), rgba(36, 160, 206, .97), rgba(42, 197, 161, .97));
-    background-size: 400% 400%;
-    animation: gradient 40s ease infinite;
+    background: rgba(36, 160, 206, .97);
     /* vh propertie allows us to use 100% of page slaces instead of 100% of page view */
     min-height: 100vh;
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-	}
-	50% {
-        background-position: 100% 50%;
-	}
-	100% {
-        background-position: 0% 50%;
-	}
 }
 
 .container{
     width: var(--page-wrap);
     margin: 0 auto;
     padding-top: 49px;
+    overflow: hidden;
 }
 
 nav{
@@ -55,7 +42,6 @@ nav{
     left: 0;
     background:rgba(56, 56, 56, .9);
     width:100%;
-    display: inline-block;
 }
 
 .navbar{
@@ -67,12 +53,9 @@ nav{
     font-weight: 800;
 }
 
-.navbar li{
-    display: inline-block;
-}
-
-/* many times, to use "float" requires the use of "clear: both" option later. */
 .navbar ul{
+    display: flex;
+    flex-wrap: wrap;
     float: right;
 }
 
@@ -128,60 +111,50 @@ header p {
 h1 {
     font-size: 5.2rem;
     font-weight: 700 !important;
+    text-shadow: 2px 2px #4444;
 }
 
 h1 MyTag{
     color: var(--main-color);
+    opacity: 1;
+    animation: blinker 2s ease-out 4;
+}
+
+@keyframes blinker {
+    50% {
+      opacity: 0;
+    }
 }
 
 main {
     color: white;
 }
 
-#welcome{
-    font-size: 1.4rem;
-    font-weight: 200;
-    text-align: justify;
+form {
+    background: #f4f4f4;
+    color: black;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 4px 4px #4444;
+    padding: 20px;
+    margin-bottom: 10px;
 }
 
-#welcome a {
-    text-decoration: none !important;
-    color: var(--main-color);
+form div {
+    margin-bottom: 20px;
 }
 
-#social-media{
-    margin: var(--content-simetry) 0;
-    font-size: 1.3rem;
-    text-align: center;
-}
-
-.icon-stabilize i{
-    text-decoration: none !important;
-    color: white !important;
-    font-size: 1px;
-    padding-top: var(--icon-size-stabilize);
-    /* display:none is other option but with one different behavior */
-    visibility: hidden;
-}
-
-.icon i{
-    text-decoration: none !important;
-    color: white !important;
-    padding: 10px 8px;
-    font-size: var(--icon-size);
-}
-
-.icon i:hover{
-    text-decoration: none !important;
-    color: var(--main-color) !important;
-    padding: 10px 8px;
-    font-size: var(--icon-size-hover);
+form input {
+    width: 100%;
+    padding-right: 50px;
 }
 
 footer {
     text-align: center;
     font-size: 1.2rem;
     padding-bottom: 30px;
+    margin-top: 20px;
 }
 footer div {
     color: white;
@@ -211,8 +184,9 @@ footer div {
     }
     
     .navbar ul{
+        display: flex;
+        flex-direction: column;
         float: none;
-        /* display: none; */
     }
 
     .navbar a{

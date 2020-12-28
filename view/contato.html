@@ -37,14 +37,67 @@
         <div class="animation">
             <div class="container">
                 <header>
-                        <h1></h1>
+                    <h1><MyTag>></MyTag>Contate-me<MyTag>_</MyTag></h1>
                 </header>
                 <main>
-                    <section id="">
+                    <section id="form">
+                        <form action="process.php">
+                            <div>
+                                <label for="name">Nome:</label> <br> 
+                                <input type="text" id="name" name="name" placeholder="Seu nome...">
+                            </div>
+                            <div>
+                                <label for="enterprise">Empresa:</label> <br> 
+                                <input type="text" id="name" name="enterprise" placeholder="Sua empresa...">
+                            </div>
+                            <div>
+                                <label for="email">Email:</label> <br> 
+                                <input type="email" id="email" name="email" placeholder="Email para contato...">
+                            </div>
+                            <div>
+                                <label for="message">Menssagem:</label> <br>
+                                <textarea name="message" id="message" cols="30" rows="5"></textarea>
+                            </div>
+                            <div>
+                                <label for="gen">Gênero</label>
+                                <select name="gen" id="gen">
+                                    <option value="empty" selected></option>
+                                    <option value="male">Masculino</option>
+                                    <option value="female">Feminino</option>
+                                    <option value="nda">Nada a declarar</option>
+                                    <option value="other">Personalizar</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="age">Age</label>
+                                <input type="number" name="number" id="number">
+                            </div>
+                            <div>
+                                <label for="birthdate">Birthdate</label>
+                                <input type="date" name="birthdate" id="birthdate">
+                            </div>
+                            <div>
+                                <label for="membership">Membership</label>
+                                <input type="radio" value="simple" name="membership" id="membership"> simple
+                                <input type="radio" value="standard" name="membership" id="membership" checked> standard
+                                <input type="radio" value="super" name="membership" id="membership"> super
+                            </div>
+                            <div>
+                                <label for="membership">I like...</label>
+                                <input type="checkbox" value="bike" name="likes" id="likes"> Bike
+                                <input type="checkbox" value="car" name="likes" id="likes"> Car
+                                <input type="checkbox" value="boat"Cname="likes" id="likes"> Boat
+                            </div>
+                            <!-- input submit -->
+                            <input type="submit" value="Submit">
+                            <!-- button submit -->
+                            <button type="submit">Submit</button>
+                            <button type="reset">Reset</button>
+                        </form>
                     </section>
                 </main>
                 <footer>
-                    <div> <i class="far fa-copyright"></i> 2020 Rodrigo Fentanes </div>
+                    <div> <i class="far fa-copyright"></i> 2021 Rodrigo Fentanes </div>
                 </footer>
             </div>
         </div>

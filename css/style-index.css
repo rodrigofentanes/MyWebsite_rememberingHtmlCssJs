@@ -24,9 +24,9 @@ html, body {
 }
 
 .animation {
-    background: linear-gradient(-45deg, rgba(238, 119, 82, .97), rgba(214, 55, 116, .97), rgba(214, 55, 116, .97), rgba(214, 55, 116, .97), rgba(206, 36, 93, 0.6), rgba(36, 160, 206, .97), rgba(36, 160, 206, .97), rgba(36, 160, 206, .97), rgba(42, 197, 161, .97));
-    background-size: 400% 400%;
-    animation: gradient 40s ease infinite;
+    background: linear-gradient(-45deg, rgba(206, 36, 93, 0.2), rgba(206, 36, 93, 0.2), rgba(206, 36, 93, 0.2), rgba(238, 119, 82, 0.2  ), rgba(42, 197, 161, .97), rgba(36, 160, 206, .97), rgba(36, 160, 206, 0.98), rgba(36, 160, 206, 0.99));
+    background-size: 1000% 1000%;
+    animation: gradient 5s linear 1;
     /* vh propertie allows us to use 100% of page slaces instead of 100% of page view */
     min-height: 100vh;
 }
@@ -56,7 +56,6 @@ nav{
     left: 0;
     background:rgba(56, 56, 56, .9);
     width:100%;
-    display: inline-block;
 }
 
 .navbar{
@@ -120,7 +119,7 @@ header {
 }
 
 header p {
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     letter-spacing: .5em;
     font-weight: 500;
     text-transform: uppercase;
@@ -129,6 +128,7 @@ header p {
 h1 {
     font-size: 5.2rem;
     font-weight: 700 !important;
+    text-shadow: 2px 2px #4444;
 }
 
 h1 MyTag{
@@ -183,6 +183,7 @@ footer {
     text-align: center;
     font-size: 1.2rem;
     padding-bottom: 30px;
+    margin-top: 20px;
 }
 footer div {
     color: white;
