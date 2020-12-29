@@ -1,7 +1,4 @@
-.flex-container{
-    display: flex;
-    flex-direction: column;
-}
+
 
 /* use 'rem' instead 'em' is one good practice */
 
@@ -24,16 +21,23 @@ html, body {
 }
 
 .animation {
-    background: rgba(36, 160, 206, .97);
+    background: linear-gradient(-45deg, rgba(238, 119, 82, 1), rgba(206, 36, 93, 1), rgba(36, 160, 206, 1), rgba(42, 197, 161, 1));
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
     /* vh propertie allows us to use 100% of page slaces instead of 100% of page view */
     min-height: 100vh;
 }
 
-.container{
-    width: var(--page-wrap);
-    margin: 0 auto;
-    padding-top: 49px;
-    overflow: hidden;
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+	}
+	50% {
+        background-position: 100% 50%;
+	}
+	100% {
+        background-position: 0% 50%;
+	}
 }
 
 nav{
@@ -93,19 +97,21 @@ nav{
     background: rgba(121, 121, 121, 0.8);
 }
 
+.container{
+    display: flex;
+    flex-direction: column;
+    margin-left:auto;
+    margin-right:auto;
+    width: var(--page-wrap);
+    padding-top: 49px;
+    overflow: hidden;
+}
 
 header {
     margin: 0 auto 20px auto;
     color: white;
     text-align: center;
     padding-top: var(--content-simetry);
-}
-
-header p {
-    font-size: 1.3rem;
-    letter-spacing: .5em;
-    font-weight: 500;
-    text-transform: uppercase;
 }
 
 h1 {
@@ -116,7 +122,6 @@ h1 {
 
 h1 MyTag{
     color: var(--main-color);
-    opacity: 1;
     animation: blinker 2s ease-out 4;
 }
 
@@ -136,18 +141,27 @@ form {
     font-size: 1.2rem;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-shadow: 4px 4px #4444;
+    box-shadow: 5px 6px #4444;
     padding: 20px;
-    margin-bottom: 10px;
+    margin: 0 7px 10px 7px;
 }
 
 form div {
     margin-bottom: 20px;
 }
 
-form input {
-    width: 100%;
-    padding-right: 50px;
+form label {
+    margin-bottom: 5px;
+    display: block;
+}
+
+.text-input {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 94%;
+    padding: 5px;
+    margin-bottom: 10px;
 }
 
 footer {

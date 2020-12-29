@@ -43,41 +43,41 @@
                     <section id="form">
                         <form action="process.php">
                             <div>
-                                <label for="name">Nome:</label> <br> 
-                                <input type="text" id="name" name="name" placeholder="Seu nome...">
+                                <label for="name">Nome:</label>
+                                <input class="text-input" type="text" id="name" name="name" placeholder="Seu nome...">
                             </div>
                             <div>
-                                <label for="enterprise">Empresa:</label> <br> 
-                                <input type="text" id="name" name="enterprise" placeholder="Sua empresa...">
+                                <label for="enterprise">Empresa:</label>
+                                <input class="text-input" type="text" id="name" name="enterprise" placeholder="Sua empresa...">
                             </div>
                             <div>
-                                <label for="email">Email:</label> <br> 
-                                <input type="email" id="email" name="email" placeholder="Email para contato...">
+                                <label for="email">Email:</label>
+                                <input class="text-input" type="email" id="email" name="email" placeholder="Email para contato...">
                             </div>
                             <div>
-                                <label for="message">Menssagem:</label> <br>
-                                <textarea name="message" id="message" cols="30" rows="5"></textarea>
+                                <label for="message">Menssagem:</label>
+                                <textarea class="text-input" name="message" id="message" cols="30" rows="5"></textarea>
                             </div>
                             <div>
                                 <label for="gen">Gênero</label>
-                                <select name="gen" id="gen">
+                                <select class="text-input" name="gen" id="gen">
                                     <option value="empty" selected></option>
                                     <option value="male">Masculino</option>
                                     <option value="female">Feminino</option>
-                                    <option value="nda">Nada a declarar</option>
-                                    <option value="other">Personalizar</option>
+                                    <!-- <option value="nda">Nada a declarar</option> -->
+                                    <!-- <option value="other">Personalizar</option> -->
                                 </select>
                             </div>
                             <div>
-                                <label for="age">Age</label>
-                                <input type="number" name="number" id="number">
+                                <label for="age">Idade:</label>
+                                <input class="text-input" type="number" name="number" id="number">
                             </div>
                             <div>
-                                <label for="birthdate">Birthdate</label>
-                                <input type="date" name="birthdate" id="birthdate">
+                                <label for="birthdate">Data de nascimento:</label>
+                                <input class="text-input" type="date" name="birthdate" id="birthdate">
                             </div>
                             <div>
-                                <label for="membership">Membership</label>
+                                <label for="membership">O que achou do site?</label>
                                 <input type="radio" value="simple" name="membership" id="membership"> simple
                                 <input type="radio" value="standard" name="membership" id="membership" checked> standard
                                 <input type="radio" value="super" name="membership" id="membership"> super
@@ -91,8 +91,8 @@
                             <!-- input submit -->
                             <input type="submit" value="Submit">
                             <!-- button submit -->
-                            <button type="submit">Submit</button>
-                            <button type="reset">Reset</button>
+                            <!-- <button type="submit">Submit</button> -->
+                            <!-- <button type="reset">Reset</button> -->
                         </form>
                     </section>
                 </main>
