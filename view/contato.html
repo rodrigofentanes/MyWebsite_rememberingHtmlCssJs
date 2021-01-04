@@ -58,41 +58,69 @@
                                 <label for="message">Menssagem:</label>
                                 <textarea class="text-input" name="message" id="message" cols="30" rows="5"></textarea>
                             </div>
-                            <div>
+                            <!-- <div>
                                 <label for="gen">Gênero</label>
                                 <select class="text-input" name="gen" id="gen">
-                                    <option value="empty" selected></option>
+                                    <option value="empty" selected>...</option>
                                     <option value="male">Masculino</option>
                                     <option value="female">Feminino</option>
-                                    <!-- <option value="nda">Nada a declarar</option> -->
-                                    <!-- <option value="other">Personalizar</option> -->
+                                    <option value="nda">Nada a declarar</option>
+                                    <option value="other">Personalizar</option>
                                 </select>
-                            </div>
-                            <div>
+                            </div> -->
+                            <!-- <div>
                                 <label for="age">Idade:</label>
-                                <input class="text-input" type="number" name="number" id="number">
-                            </div>
-                            <div>
+                                <input class="text-input" type="number" name="number" placeholder="..." id="number">
+                            </div> -->
+                            <!-- <div>
                                 <label for="birthdate">Data de nascimento:</label>
                                 <input class="text-input" type="date" name="birthdate" id="birthdate">
+                            </div> -->
+                            <div class="box">
+                                <h2>O que achou do site?</h2>
+                                <div>
+                                    <input type="radio" value="nda" name="rating" id="nda" checked>
+                                    <label for="nda">Prefiro não opinar</label>
+                                </div>
+                                <div>
+                                    <input type="radio" value="ruim" name="rating" id="ruim">
+                                    <label for="ruim">Ruim</label>
+                                </div>
+                                <div>
+                                    <input type="radio" value="bom" name="rating" id="bom">
+                                    <label for="bom">Bom</label>
+                                </div>
+                                <div>
+                                    <input type="radio" value="otimo" name="rating" id="otimo">
+                                    <label for="otimo">Ótimo</label>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <h2>Quais das minhas habilidades lhe interessa?</h2>
+                                <div>
+                                    <input type="checkbox" value="html5" name="interest" id="html5">
+                                    <label for="html5">HTML5</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" value="css3" name="interest" id="css3">
+                                    <label for="css3">CSS3</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" value="javascript" name="interest" id="javascript">
+                                    <label for="javascript">JavaScript</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" value="react" name="interest" id="react">
+                                    <label for="react">REACT</label>
+                                </div>
                             </div>
                             <div>
-                                <label for="membership">O que achou do site?</label>
-                                <input type="radio" value="simple" name="membership" id="membership"> simple
-                                <input type="radio" value="standard" name="membership" id="membership" checked> standard
-                                <input type="radio" value="super" name="membership" id="membership"> super
+                                <!-- input submit -->
+                                <input class="button" type="submit" value="Submit" id="button">
+                                <!-- button submit -->
+                                <!-- <button type="submit">Submit</button> -->
+                                <!-- <button type="reset">Reset</button> -->
                             </div>
-                            <div>
-                                <label for="membership">I like...</label>
-                                <input type="checkbox" value="bike" name="likes" id="likes"> Bike
-                                <input type="checkbox" value="car" name="likes" id="likes"> Car
-                                <input type="checkbox" value="boat"Cname="likes" id="likes"> Boat
-                            </div>
-                            <!-- input submit -->
-                            <input type="submit" value="Submit">
-                            <!-- button submit -->
-                            <!-- <button type="submit">Submit</button> -->
-                            <!-- <button type="reset">Reset</button> -->
                         </form>
                     </section>
                 </main>

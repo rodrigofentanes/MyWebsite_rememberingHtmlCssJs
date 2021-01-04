@@ -1,7 +1,7 @@
 /* use 'rem' instead 'em' is one good practice */
 
 :root {
-    --page-wrap:70%;
+    --page-wrap:70vw;
     --content-simetry: 80px;
     --icon-size: 30px;
     --icon-size-hover: calc(var(--icon-size) * 1.1);
@@ -128,10 +128,10 @@ header p {
 h1 {
     font-size: 5.2rem;
     font-weight: 700 !important;
-    text-shadow: 2px 2px #4444;
+    text-shadow: 3px 3px #4444;
 }
 
-h1 MyTag{
+MyTag{
     color: var(--main-color);
 }
 
@@ -180,14 +180,12 @@ main {
 }
 
 footer {
+    color: white;
+    font-weight: 800;
     text-align: center;
     font-size: 1.2rem;
+    padding-top: 30px;
     padding-bottom: 30px;
-    margin-top: 20px;
-}
-footer div {
-    color: white;
-    font-weight: 400;
 }
 
 /* we can use the nomenclature -> @media(min-width:500px) and (max-width:800px) to activate some appearence in this range */
@@ -203,21 +201,19 @@ footer div {
 
     nav{
         text-align: center;
-        display: inline-block;
-        
-    }
-    
-    .navbar li{
-        display: block;
-        border-top: 1px solid rgba(255, 255, 255, 0.2);
     }
     
     .navbar ul{
         float: none;
         /* display: none; */
     }
+    
+    .navbar li {
+        width: 100%;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
 
-    .navbar a{
+    .navbar a {
         display: block;
     }
 }
