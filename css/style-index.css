@@ -2,10 +2,10 @@
 
 :root {
     --page-wrap:70vw;
-    --content-simetry: 80px;
+    --content-simetry: 60px;
     --icon-size: 30px;
     --icon-size-hover: calc(var(--icon-size) * 1.1);
-    --icon-size-stabilize: calc(var(--icon-size) * 1.3);
+    --icon-size-stabilize: calc(var(--icon-size) * 1.4);
     --main-color: rgba(234, 255, 140, 1);
 }
 
@@ -161,6 +161,7 @@ main {
     color: white !important;
     font-size: 1px;
     padding-top: var(--icon-size-stabilize);
+    padding-bottom: 20px;
     /* display:none is other option but with one different behavior */
     visibility: hidden;
 }

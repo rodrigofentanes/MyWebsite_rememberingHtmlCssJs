@@ -1,19 +1,137 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <!-- Responsividade -->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- SEO -->
-        <meta name="author" content="Carlos Rodrigo Araújo Fentanes">
-        <meta name="description" content="Está é a página inicial do portifólio de Rodrigo Fentanes, programador/developer soteropolitano apaixonado por tecnologia. A partir desta página você poderá encontrar todas as referências necessárias para conhecê-lo melhor. Seja bem vindx!">
-        <meta name="keywords" content="portifólio, Rodrigo Fentanes, Carlos Rodrigo Araújo Fentanes, programador, tecnologia, Salvador, Bahia, Brasil">
-        <title>Sobre mim | Rodrigo</title>
+<!--  Isto é um comentário em HTML -->
+
+<!-- A INTERNET 
+        Como a internet funciona:
+            => É uma rede global de computadores.
+            => Cada computador/roteador tem um Endereço IP (73.158.6.61).
+            => Computadores conversam entre si utilizando o protocolo TCP/IP.
+            => O protocolo HTTP lida com o tráfego web entre browsers e servidores web através de requests e responses. É chamado de application layer protocol e roda sobre o protocolo TCP.
+            => HTTPS é utilizado para conexões seguras, utiliza certificados SSL e afins para tal propósito.
+            => Existem outros tipos de protocolos.
+            => Websites/Webpages são arquivos armazenados em computadores com a finalidade de rodar um pedaço de software chamado web server (Apache, Nginx, etc).
+            => Hosting Companies provêm espaços num servidor próprio para o armazenamento de websites de terceiros.
+            => Domain Names podem ser comprados e ligados à web servers.
+            => O DNS é utilizado para mapear os Domain Names, relacionando-os também aos seus respectivos endereços IP.
+
+        Abaixo uma imagem para representar, de forma simples, esta relação:
+-->
+    <a href="/img/Como_a_internet_funciona.png" target="_blank" style="visibility:hidden"></a>
+
+<!-- INTRODUÇÃO ÀS TECNOLOGIAS WEB
+        O que é o HTML (Hypertext Markup Language):
+            => HTML não é uma linguagem de programação.
+            => É utilizado para mostrar conteúdo.
+
+        O que o HTML faz: 
+            => Constrói conteúdo estático.
+
+        O que é o CSS (Cascading Style Sheets):
+            => É utilizado para estilizar elementos HTML.
+            => Pode ser estendida com Sass/Less.
+
+        O que o CSS faz:
+            => Constrói a parte visual do HTML.
+
+        Tecnologias e suas aplicações comuns:
+            => HTML: Mostrar conteúdo / Estruturar.
+            => CSS: Estilo & Design.
+            => JavaScript: Programar o Front End dinamicamente.
+            => PHP, Python, C#, JavaScript: Programar o Backend.
+            => MySQL, MongoDB: Banco de dados / Armazenamento.
+-->
+
+<!-- INTRODUÇÃO AO HTML
+        => Mais sobre HTML: https://developer.mozilla.org/pt-BR/docs/Web/HTML
+        => Lista completa de tags HTML: https://www.w3schools.com/tags/default.asp
         
-        <!-- Css -->
+    EMMET (VS CODE)
+        No VS Code o snippet Emmet é utilizado para codificar rapidamente as tags HTML através de atalhos.
+
+        Exemplo: ul>li*3>span.hello$ 
+        *** Pressione ENTER ou TAB para aplicar o atalho. ***
+
+        O atalho acima cria o seguinte código:
+            <ul>
+            <li><span class="hello1"></span></li>
+            <li><span class="hello2"></span></li>
+            <li><span class="hello3"></span></li>
+            </ul>
+
+        Documentação do Emmet: https://docs.emmet.io/cheat-sheet/
+        
+    LIVE SERVER (VS CODE)
+        A extensão live server permite subir um servidor local para rodar arquivos web.
+
+        *** Após instalar a extensão basta dar um clique com o botão direito no arquivo que deseja rodar e ir na opção “Open with live server”. ***
+
+        *** Há também um botão no canto inferior direito do VS Code para rodar o live server. ***
+
+    ARQUIVOS HTML
+        Arquivos nomeados "index.html", normalmente, serão abertos primeiramente, ou seja, o servidor irá procurar este arquivo na raiz de sua pasta e assumi-lo como pagina iniciail.
+-->
+
+<!-- 
+    => DOCTYPE indica o tipo de formato html a ser interpretado pelo navegador.
+    => No VS Code, graças ao Emmet, basta digitar uma exclamação (!) para criar uma base de código HTML.
+-->
+<!DOCTYPE html>
+<!-- O atributo lang na tag html indica a linguagem na qual o conteúdo da página está escrito. 
+    Para saber mais acesse: https://tableless.com.br/declarando-idiomas-no-html/
+-->
+<html lang="pt-br">
+    <!-- Mais sobre a head: https://www.w3schools.com/html/html_head.asp -->
+    <head>
+        <!-- Configuração de caracteres compatíveis -->
+        <!-- Mais sobre meta tag:
+                Iniciante => https://www.w3schools.com/tags/tag_meta.asp
+                Avançado => https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/meta
+        -->
+        <meta charset="UTF-8">
+        <!-- Responsividade / Visualização do conteúdo -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Indica o autor da página -->
+        <meta name="author" content="Carlos Rodrigo Araújo Fentanes">
+        <!-- Search Engine Optimization (SEO) -->
+        <meta name="keywords" content="portifólio, Rodrigo Fentanes, Carlos Rodrigo Araújo Fentanes, programador, tecnologia, Salvador, Bahia, Brasil">
+        <!-- O Google irá mostrar este título na pesquisa -->
+        <title>Sobre mim | Rodrigo</title>
+        <!-- O Google irá mostrar esta descrição embaixo do título -->
+        <meta name="description" content="Rodrigo Fentanes é um programador/developer soteropolitano apaixonado por tecnologia. A partir desta página você poderá encontrar todas as referências necessárias para conhecê-lo melhor.">
+        
+        <!-- O código CSS pode ser colocado dentro da tag style, mas isso não é uma boa prática -->
+        <style>
+            /* Este é um comentário CSS */
+        </style>
+        
+        <!-- Os código em script, como javascript por exemplo, podem vir dentre da tag script -->
+        <script>
+            // Este é um comentário de unilinha dentro de um script.
+            /*
+                Este é um comentário multilinha
+            */
+            
+            /*  
+                => Abaixo o script só será reconhecido caso o navegador tenha suporte à scripts, caso contrário, o mesmo será considerado apenas um comentário HTML.
+                    <!--
+                    document.write("Olá mundo!")
+                    //-->
+            */
+
+             
+        </script>
+
+        <!-- RELACIONAMENTO ENTRE ARQUIVOS
+            A tag link auxilia no carregamento de arquivos CSS externos
+            Mais sobre a tag link: 
+                => https://www.w3schools.com/tags/tag_link.asp
+                => https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/link
+        -->
         <link rel="stylesheet" href="../css/mayerReset.css">
         <link rel="stylesheet" href="../css/style-index.css">
-        <!-- load stylesheet only if width is lower than 768px -->
+
+        <!-- CARREGAMENTO CONDICIONAL 
+            Carrega o arquivo CSS somente se a largura (width) for menor que 768px.
+        -->
         <link rel="stylesheet" media="screen and (max-width: 768px)" href="">
 
         <!-- fonts -->
@@ -21,14 +139,10 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
 
-        <style>
-            /* css code can be here too. */
-        </style>
 
         <!-- Fontawesome -->
-        <script src="https://kit.fontawesome.com/15ee8b6d47.js" crossorigin="anonymous">
-            // Script code, like JavaScript, can be here too. 
-        </script>
+        <script src="https://kit.fontawesome.com/15ee8b6d47.js" crossorigin="anonymous"></script>
+
     </head>
     <body >
         <!-- this page use the semantic tag consept. -->
